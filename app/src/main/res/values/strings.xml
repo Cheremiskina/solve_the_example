@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="totalCountLabel">Итого решено примеров</string>
+    <string name="correctLabel">Правильно</string>
+    <string name="incorrectLabel">Неправильно</string>
+    <string name="start">СТАРТ</string>
+    <string name="check">ПРВЕРКА</string>
+    <string name="zeroValue">0</string>
+    <string name="doubleZeroValue">00</string>
+    <string name="initialOperation">+</string>
+    <string name="equalSign">=</string>
+    <string name="zeroPercent">0.00%</string>
 </resources>

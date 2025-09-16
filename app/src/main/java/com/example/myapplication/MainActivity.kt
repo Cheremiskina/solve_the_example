@@ -9,7 +9,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import kotlin.random.Random
-import androidx.core.graphics.toColorInt
+import androidx.core.content.ContextCompat
 
 class MainActivity : Activity() {
 
@@ -52,15 +52,15 @@ class MainActivity : Activity() {
         checkButton.isEnabled = false
         editText.isEnabled = false
 
-        startButton.setBackgroundColor("#6200EF".toColorInt())
-        checkButton.setBackgroundColor("#B0B0B0".toColorInt())
+        startButton.setBackgroundColor(ContextCompat.getColor(this, R.color.purple))
+        checkButton.setBackgroundColor(ContextCompat.getColor(this, R.color.grey))
 
         startButton.setOnClickListener {
             generateExample()
             startButton.isEnabled = false
             checkButton.isEnabled = true
-            startButton.setBackgroundColor("#B0B0B0".toColorInt())
-            checkButton.setBackgroundColor("#6200EF".toColorInt())
+            startButton.setBackgroundColor(ContextCompat.getColor(this, R.color.grey))
+            checkButton.setBackgroundColor(ContextCompat.getColor(this, R.color.purple))
             editText.isEnabled = true
             editText.text.clear()
             exampleLayout.setBackgroundColor(Color.WHITE)
@@ -72,14 +72,14 @@ class MainActivity : Activity() {
                 checkButton.isEnabled = false
                 editText.isEnabled = false
                 startButton.isEnabled = true
-                startButton.setBackgroundColor("#6200EF".toColorInt())
-                checkButton.setBackgroundColor("#B0B0B0".toColorInt())
+                startButton.setBackgroundColor(ContextCompat.getColor(this, R.color.purple))
+                checkButton.setBackgroundColor(ContextCompat.getColor(this, R.color.grey))
             } else {
                 checkButton.isEnabled = true
                 editText.isEnabled = true
                 startButton.isEnabled = false
-                startButton.setBackgroundColor("#B0B0B0".toColorInt())
-                checkButton.setBackgroundColor("#6200EF".toColorInt())
+                startButton.setBackgroundColor(ContextCompat.getColor(this, R.color.grey))
+                checkButton.setBackgroundColor(ContextCompat.getColor(this, R.color.purple))
             }
         }
     }
