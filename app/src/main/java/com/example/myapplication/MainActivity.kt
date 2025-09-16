@@ -128,10 +128,10 @@ class MainActivity : Activity() {
         totalAnswers++
 
         if (number == currentAnswer) {
-            exampleLayout.setBackgroundColor(Color.GREEN)
+            exampleLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
             correctAnswers++
         } else {
-            exampleLayout.setBackgroundColor(Color.RED)
+            exampleLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
         }
 
         totalCountText.text = totalAnswers.toString()
