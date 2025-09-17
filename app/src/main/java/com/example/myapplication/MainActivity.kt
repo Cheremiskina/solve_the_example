@@ -22,10 +22,8 @@ class MainActivity : Activity() {
     private lateinit var firstOperandText: TextView
     private lateinit var secondOperandText: TextView
     private lateinit var operatorText: TextView
-    private lateinit var equalsText: TextView
     private lateinit var editText: EditText
     private lateinit var exampleLayout: LinearLayout
-
     private var correctAnswers = 0
     private var totalAnswers = 0
     private var currentAnswer = 0
@@ -44,7 +42,6 @@ class MainActivity : Activity() {
         firstOperandText = findViewById(R.id.firstOperandText)
         secondOperandText = findViewById(R.id.secondOperandText)
         operatorText = findViewById(R.id.operatorText)
-        equalsText = findViewById(R.id.equalsText)
         editText = findViewById(R.id.edittext)
         
         exampleLayout = findViewById(R.id.mainLayout)
@@ -92,7 +89,7 @@ class MainActivity : Activity() {
 
         if (operator == "/") {
             while (true){
-                secondOperand = Random.nextInt(10, 50)
+                secondOperand = Random.nextInt(10, 100)
                 val result = Random.nextInt(1, 10)
                 firstOperand = secondOperand * result
                 if (firstOperand in 10..99) {
